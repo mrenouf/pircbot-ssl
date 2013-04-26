@@ -140,6 +140,7 @@ public abstract class PircBot implements ReplyConstants {
         _server = hostname;
         _port = port;
         _password = password;
+        _socketFactory = socketFactory;
         
         if (isConnected()) {
             throw new IOException("The PircBot is already connected to an IRC server.  Disconnect first.");
